@@ -1,3 +1,13 @@
+// ==========================================
+// CONFIGURATION: Set your contact channels here!
+// ==========================================
+const CONTACT_CONFIG = {
+  whatsappNumber: "919329903375", // International format without '+' or spaces (default set to +91 93299 03375)
+  emailjsPublicKey: "YOUR_EMAILJS_PUBLIC_KEY",     // Place your EmailJS Public Key here
+  emailjsServiceId: "YOUR_EMAILJS_SERVICE_ID",     // Place your EmailJS Service ID here
+  emailjsTemplateId: "YOUR_EMAILJS_TEMPLATE_ID"    // Place your EmailJS Template ID here
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initBackgroundCanvas();
   initHeroCanvas();
@@ -6,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initMobileMenu();
   initDynamicGitHubRepos();
+  initContactForm();
 });
 
 /* =========================================================================
@@ -522,3 +533,172 @@ function initDynamicGitHubRepos() {
       });
   });
 }
+
+/* =========================================================================
+   8. UPGRADED CONTACT FORM WORKFLOW (EmailJS & WhatsApp Integration)
+   ========================================================================= */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const modal = document.getElementById('contact-modal');
+  const closeBtn = document.getElementById('modal-close-btn');
+  const emailBtn = document.getElementById('send-email-btn');
+  const whatsappBtn = document.getElementById('send-whatsapp-btn');
+  const toast = document.getElementById('toast-notification');
+
+  if (!form || !modal) return;
+
+  // Form input elements
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const subjectInput = document.getElementById('subject');
+  const messageInput = document.getElementById('message');
+
+  // Preview elements inside the modal
+  const previewSender = document.getElementById('modal-preview-sender');
+  const previewSubject = document.getElementById('modal-preview-subject');
+  const previewMessage = document.getElementById('modal-preview-message');
+
+  let formData = {};
+
+  // Form submission handler
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Verify browser validation first
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Capture form values
+    formData = {
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      subject: subjectInput.value.trim(),
+      message: messageInput.value.trim()
+    };
+
+    // Populate Modal Preview details
+    if (previewSender) previewSender.textContent = `${formData.name} (${formData.email})`;
+    if (previewSubject) previewSubject.textContent = formData.subject;
+    if (previewMessage) previewMessage.textContent = formData.message;
+
+    // Show Modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  });
+
+  // Close modal helper
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore background scrolling
+    // Reset buttons state
+    emailBtn.disabled = false;
+    emailBtn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Send via Email
+    `;
+    whatsappBtn.disabled = false;
+  }
+
+  // Close modal event listeners
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Toast notification helper
+  function showToast(type, message) {
+    const icon = type === 'success' ? '✅' : '❌';
+    toast.className = `toast toast-${type} active`;
+    const iconEl = document.getElementById('toast-icon');
+    const msgEl = document.getElementById('toast-message');
+    if (iconEl) iconEl.textContent = icon;
+    if (msgEl) msgEl.textContent = message;
+
+    // Auto dismiss after 4 seconds
+    setTimeout(() => {
+      toast.classList.remove('active');
+    }, 4000);
+  }
+
+  // --- SEND VIA EMAIL (EMAILJS) ---
+  emailBtn.addEventListener('click', () => {
+    // Check credentials placeholders
+    if (CONTACT_CONFIG.emailjsPublicKey === "YOUR_EMAILJS_PUBLIC_KEY" || 
+        CONTACT_CONFIG.emailjsServiceId === "YOUR_EMAILJS_SERVICE_ID" || 
+        CONTACT_CONFIG.emailjsPublicKey === "") {
+      showToast('error', 'EmailJS credentials are not configured yet!');
+      console.warn("Please configure EmailJS keys in CONTACT_CONFIG at the top of js/app.js.");
+      return;
+    }
+
+    // Set loading state
+    emailBtn.disabled = true;
+    whatsappBtn.disabled = true;
+    emailBtn.innerHTML = `
+      <svg class="animate-spin btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10"></circle>
+      </svg>
+      Sending...
+    `;
+
+    // Map parameters to match your EmailJS Template fields
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    };
+
+    // Send EmailJS request
+    emailjs.send(
+      CONTACT_CONFIG.emailjsServiceId,
+      CONTACT_CONFIG.emailjsTemplateId,
+      templateParams,
+      CONTACT_CONFIG.emailjsPublicKey
+    )
+    .then((response) => {
+      console.log('EmailJS Success:', response.status, response.text);
+      showToast('success', 'Message sent successfully via Email!');
+      form.reset(); // Clear original contact form
+      closeModal();
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      showToast('error', 'Failed to send message. Please try again.');
+      emailBtn.disabled = false;
+      whatsappBtn.disabled = false;
+      emailBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Send via Email
+      `;
+    });
+  });
+
+  // --- SEND VIA WHATSAPP ---
+  whatsappBtn.addEventListener('click', () => {
+    // Format message text for WhatsApp API
+    const line1 = `*New Contact Message from Portfolio*`;
+    const line2 = `*Name:* ${formData.name}`;
+    const line3 = `*Email:* ${formData.email}`;
+    const line4 = `*Subject:* ${formData.subject}`;
+    const line5 = `*Message:*`;
+    const line6 = formData.message;
+
+    const fullMessage = `${line1}\n\n${line2}\n${line3}\n${line4}\n\n${line5}\n${line6}`;
+    const encodedText = encodeURIComponent(fullMessage);
+    
+    // Construct WhatsApp link
+    const waUrl = `https://wa.me/${CONTACT_CONFIG.whatsappNumber}?text=${encodedText}`;
+    
+    // Open in a new tab/window
+    window.open(waUrl, '_blank');
+    
+    // Reset form and close modal
+    form.reset();
+    closeModal();
+    showToast('success', 'Redirected to WhatsApp!');
+  });
+}
+

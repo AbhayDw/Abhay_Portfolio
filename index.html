@@ -543,6 +543,86 @@
             </div>
           </div>
 
+          <!-- Project: Breast Cancer Detection -->
+          <div class="glass-card project-card reveal-slide-right" data-repo="AbhayDw/Breast-Cancer-Detection">
+            <div class="project-img-wrapper">
+              <img src="assets/breast_cancer.png" alt="Breast Cancer Detection Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Classification</span>
+                <span class="project-metrics-pill">Logistic Regression</span>
+              </div>
+              
+              <h3>Breast Cancer Detection</h3>
+              <p class="repo-desc">Machine Learning classification project that predicts breast cancer diagnosis using Logistic Regression and an interactive Gradio application.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Wisconsin breast cancer dataset exploratory analysis and evaluation.</li>
+                <li>Feature scaling and data preprocessing pipelines using Scikit-Learn.</li>
+                <li>Classification modeling using optimized Logistic Regression parameter tuning.</li>
+                <li>Interactive Gradio app for live user-friendly diagnosis prediction.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Scikit-Learn</span>
+                <span class="project-tag">Logistic Regression</span>
+                <span class="project-tag">Gradio</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Breast-Cancer-Detection" target="_blank" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://abhay200666-breast-cancer-detection.hf.space" target="_blank" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Titanic Survival Prediction -->
+          <div class="glass-card project-card reveal-slide-left" data-repo="AbhayDw/titanic-survival-prediction">
+            <div class="project-img-wrapper">
+              <img src="assets/titanic.png" alt="Titanic Survival Prediction Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Classification</span>
+                <span class="project-metrics-pill">Logistic Regression</span>
+              </div>
+              
+              <h3>Titanic Survival Prediction</h3>
+              <p class="repo-desc">Machine Learning classification project that predicts passenger survival using Logistic Regression and an interactive Gradio web application.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Complete data cleanup, imputation, and exploratory analysis.</li>
+                <li>Strategic feature engineering focusing on passenger titles and family groupings.</li>
+                <li>Binary classification engine trained on optimised Logistic Regression estimators.</li>
+                <li>Responsive Gradio interface enabling live simulation of passenger survival likelihoods.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Scikit-Learn</span>
+                <span class="project-tag">Logistic Regression</span>
+                <span class="project-tag">Gradio</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/titanic-survival-prediction" target="_blank" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://abhay200666-titanic-survival-prediction.hf.space" target="_blank" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
           <!-- Project 2: California Housing Price -->
           <div class="glass-card project-card reveal-slide-right" data-repo="AbhayDw/California-Housing-Prediction">
             <div class="project-img-wrapper">
@@ -1014,6 +1094,46 @@
       </div>
     </div>
   </footer>
+
+  <!-- CONTACT METHOD MODAL -->
+  <div id="contact-modal" class="modal-backdrop">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon">✉️</div>
+        <h3>Choose Send Method</h3>
+        <p>How would you like to transmit this message to Abhay?</p>
+      </div>
+      
+      <div class="modal-preview-box">
+        <p><strong>From:</strong> <span id="modal-preview-sender"></span></p>
+        <p><strong>Subject:</strong> <span id="modal-preview-subject"></span></p>
+        <p class="preview-msg" id="modal-preview-message"></p>
+      </div>
+      
+      <div class="modal-actions">
+        <button id="send-email-btn" class="modal-btn modal-btn-email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send via Email
+        </button>
+        <button id="send-whatsapp-btn" class="modal-btn modal-btn-whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.025 14.072.989 11.478.989c-5.437 0-9.862 4.371-9.866 9.8-.001 2.03.535 4.017 1.549 5.753L2.14 20.895l4.507-1.741zM17.7 13.86c-.34-.17-2.005-.99-2.316-1.103-.311-.113-.538-.17-.765.17-.226.34-.877 1.103-1.075 1.33-.198.226-.396.254-.736.084-.34-.17-1.437-.53-2.737-1.69-1.01-.902-1.69-2.016-1.888-2.356-.198-.34-.021-.523.149-.693.153-.153.34-.396.51-.595.17-.198.226-.34.34-.566.113-.226.056-.425-.028-.595-.085-.17-.765-1.842-1.049-2.528-.276-.665-.558-.574-.765-.584-.198-.01-.425-.01-.651-.01-.226 0-.595.085-.907.425-.311.34-1.188 1.161-1.188 2.833 0 1.672 1.216 3.284 1.386 3.51.17.227 2.392 3.653 5.795 5.122.81.35 1.443.559 1.936.716.813.259 1.554.222 2.139.135.653-.098 2.005-.82 2.288-1.615.283-.792.283-1.47.198-1.614-.085-.144-.311-.227-.651-.397z"/></svg>
+          Send via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-notification" class="toast">
+    <div class="toast-content">
+      <span id="toast-icon" class="toast-icon"></span>
+      <span id="toast-message" class="toast-message"></span>
+    </div>
+  </div>
+
+  <!-- EmailJS Library Script -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- Scripts Link -->
   <script src="js/app.js"></script>
