@@ -1,13 +1,1142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>abhayportfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Abhay Dwivedi — AI Engineer, Machine Learning Developer, Data Scientist, and Data Analyst. High-performance models, clean analytics, and full-stack solutions.">
+  <title>Abhay Dwivedi — AI Engineer & Machine Learning Portfolio</title>
+  
+  <!-- Style Link -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND DECORATIONS -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-effects">
+    <div class="gradient-mesh"></div>
+    <div class="grid-overlay"></div>
+    <div class="glowing-orb"></div>
+    <div class="glowing-orb orb-2"></div>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Abhay<span>Dwivedi</span>
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </nav>
+    </div>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar"></div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <main>
+    
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-slide-left">
+          <div class="hero-badge-container">
+            <span class="hero-badge-dot"></span>
+            <span class="hero-badge-text">AI / ML Engineer</span>
+          </div>
+          
+          <h1 class="hero-title">
+            AI Engineer.<br>
+            Machine Learning Engineer.<br>
+            Data Scientist.<br>
+            <span class="gradient-text">Building Intelligent Solutions with Data.</span>
+          </h1>
+          
+          <p class="hero-desc">
+            I engineer secure, production-grade Machine Learning models and clean analytical pipelines to extract value from complex datasets. Actively looking for internship opportunities to solve high-impact industrial problems.
+          </p>
+          
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">
+              Explore Projects
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-val">7.41<span>/10</span></span>
+              <span class="stat-label">B.Tech CGPA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">6</span>
+              <span class="stat-label">Featured Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">5</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-scale">
+          <div class="ai-illustration-box">
+            <!-- 3D Neural Sphere Canvas -->
+            <canvas id="neural-mesh-canvas"></canvas>
+            
+            <!-- Orbiting Badges -->
+            <div class="floating-ai-node node-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Python</span>
+            </div>
+            <div class="floating-ai-node node-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span>Random Forest</span>
+            </div>
+            <div class="floating-ai-node node-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span>Pandas & SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down-indicator">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title"><span>Who I Am &</span> <em>My Journey</em></h2>
+        <p class="section-subtitle">Aspiring AI/ML Engineer focused on translating mathematical logic and algorithms into intelligent production software.</p>
+        
+        <div class="about-grid">
+          <!-- Profile Card Left -->
+          <div class="glass-card profile-card reveal-slide-left">
+            <div class="profile-header">
+              <div class="profile-avatar">👨‍💻</div>
+              <div class="profile-meta">
+                <h3>Abhay Dwivedi</h3>
+                <p>AI / ML Engineer & Data Analyst</p>
+              </div>
+            </div>
+            
+            <p class="profile-bio">
+              I am an aspiring AI Engineer, Machine Learning Engineer, and Data Scientist. I am passionate about building intelligent applications, solving real-world problems using data, continuously learning modern AI technologies, and looking for internship opportunities in AI, Machine Learning, Data Science, and Data Analytics.
+            </p>
+
+            <div class="quick-facts">
+              <div class="fact-badge">
+                <span class="fact-title">Location</span>
+                <span class="fact-value">Bhopal, MP, India</span>
+              </div>
+              <div class="fact-badge">
+                <span class="fact-title">Specialization</span>
+                <span class="fact-value">Cyber Security & ML</span>
+              </div>
+              <div class="fact-badge">
+                <span class="fact-title">Academic Score</span>
+                <span class="fact-value">7.41 CGPA</span>
+              </div>
+              <div class="fact-badge">
+                <span class="fact-title">Availability</span>
+                <span class="fact-value">Internships</span>
+              </div>
+            </div>
+            
+            <div class="fact-badge" style="grid-column: span 2;">
+              <span class="fact-title">Professional Focus</span>
+              <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">
+                Merging data processing expertise (Python, Pandas, SQL) with statistical machine learning modeling (Regression, Classification, Cosine Similarity) to solve real business analytics questions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Right -->
+          <div class="glass-card timeline-card reveal-slide-right">
+            <h3 class="timeline-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Education Timeline
+            </h3>
+            
+            <div class="timeline-items">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                  <span class="timeline-role">B.Tech in Computer Science Engineering (Cyber Security)</span>
+                  <span class="timeline-date">2023 - 2027</span>
+                </div>
+                <div class="timeline-org">Sagar Institute of Research and Technology (SIRT)</div>
+                <p class="timeline-desc">Affiliated with Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV). Focus on computational structures, data security protocols, and analytical data science. Current CGPA: 7.41 / 10.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                  <span class="timeline-role">Class XII (Senior Secondary Education)</span>
+                  <span class="timeline-date">2023</span>
+                </div>
+                <div class="timeline-org">Government Venkat Higher Secondary School No.2, Satna (MP)</div>
+                <p class="timeline-desc">Completed board examinations with a score of 65.8% under science curriculum focuses.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                  <span class="timeline-role">Class X (Secondary School Education)</span>
+                  <span class="timeline-date">2021</span>
+                </div>
+                <div class="timeline-org">SSM School, Satna (MP)</div>
+                <p class="timeline-desc">Completed board examinations with a score of 78%.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-tag">Services & Offerings</div>
+        <h2 class="section-title"><span>What I Bring to</span> <em>The Table</em></h2>
+        <p class="section-subtitle">Helping organizations analyze historical trends, optimize inventories, and deploy machine learning pipelines.</p>
+        
+        <div class="services-grid stagger-container">
+          <div class="glass-card service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3>AI & Machine Learning</h3>
+            <p>Designing predictive models such as Random Forest Regressors, Linear Regressors, and Classification structures in Scikit-Learn.</p>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3>Data Analytics</h3>
+            <p>Processing raw tables using Pandas/NumPy, building Power BI dashboards, and performing Exploratory Data Analysis (EDA).</p>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3>Recommendation Systems</h3>
+            <p>Developing similarity metrics such as Cosine Similarity to construct content-based item recommender models.</p>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3>SQL Database Engineering</h3>
+            <p>Writing structured queries, designing tables, and optimizing joins using MySQL and PostgreSQL servers.</p>
+          </div>
+        </div>
+
+        <!-- Workflow Extra Premium -->
+        <div class="workflow-title-box reveal">
+          <div class="section-tag">Methodology</div>
+          <h2 class="section-title">My <em>Technical Workflow</em></h2>
+        </div>
+        
+        <div class="workflow-grid stagger-container">
+          <div class="workflow-step">
+            <div class="workflow-num">01</div>
+            <div class="workflow-name">Data Ingestion</div>
+            <div class="workflow-desc">Structuring raw datasets and managing tables in SQL databases.</div>
+            <div class="workflow-connector"></div>
+          </div>
+          
+          <div class="workflow-step">
+            <div class="workflow-num">02</div>
+            <div class="workflow-name">Data Cleaning & EDA</div>
+            <div class="workflow-desc">Handling missing values, outlier detection, and statistical testing.</div>
+            <div class="workflow-connector"></div>
+          </div>
+          
+          <div class="workflow-step">
+            <div class="workflow-num">03</div>
+            <div class="workflow-name">Feature Engineering</div>
+            <div class="workflow-desc">Vectorization, scaling variables, and selecting optimal correlations.</div>
+            <div class="workflow-connector"></div>
+          </div>
+          
+          <div class="workflow-step">
+            <div class="workflow-num">04</div>
+            <div class="workflow-name">Model Engineering</div>
+            <div class="workflow-desc">Fitting estimators (Regression/Cosine metrics) and testing metrics.</div>
+            <div class="workflow-connector"></div>
+          </div>
+          
+          <div class="workflow-step">
+            <div class="workflow-num">05</div>
+            <div class="workflow-name">Deployment & viz</div>
+            <div class="workflow-desc">Deploying stream dashboards (Streamlit) or building Power BI charts.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SKILLS SECTION -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-tag">Technical Competencies</div>
+        <h2 class="section-title"><span>Skills & Core</span> <em>Technologies</em></h2>
+        <p class="section-subtitle">My structured technical skill set. Scroll to see progress bar animations.</p>
+        
+        <div class="skills-grid">
+          <!-- Programming -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">💻</span>
+              <span class="skill-cat-title">Programming</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Python</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">SQL</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Science -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🧪</span>
+              <span class="skill-cat-title">Data Science</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Data Cleaning & Preprocessing</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Exploratory Data Analysis (EDA)</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Feature Engineering</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="78"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🤖</span>
+              <span class="skill-cat-title">Machine Learning</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Regression & Classification</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Recommendation Systems</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Model Evaluation Metrics</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Libraries -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">📦</span>
+              <span class="skill-cat-title">Libraries</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Pandas / NumPy</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Scikit-learn</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Matplotlib & Seaborn</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">💾</span>
+              <span class="skill-cat-title">Databases</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">MySQL</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">PostgreSQL</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="70"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">⚙️</span>
+              <span class="skill-cat-title">Tools & Visualization</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Power BI</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Excel Modeling</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Git & GitHub</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foundations -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">📐</span>
+              <span class="skill-cat-title">Foundations</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Statistics & Probability</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="78"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Linear Algebra</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">DBMS Concepts</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core CS -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">📚</span>
+              <span class="skill-cat-title">Computer Science</span>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Data Structures & Algo</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="72"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Operating Systems</span><span class="skill-level">Intermediate</span></div>
+                <div class="skill-progress-track"><div class="skill-progress-bar" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack section (glowing badges) -->
+        <h3 class="reveal" style="text-align: center; margin-top: 80px; font-family: var(--font-heading); color: #fff; font-size: 1.5rem;">Core Technology Stack</h3>
+        <div class="tech-stack-container reveal-scale">
+          <span class="tech-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg> Python</span>
+          <span class="tech-badge">SQL</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">scikit-learn</span>
+          <span class="tech-badge">Power BI</span>
+          <span class="tech-badge">Excel</span>
+          <span class="tech-badge">Git</span>
+          <span class="tech-badge">GitHub</span>
+          <span class="tech-badge">Jupyter</span>
+          <span class="tech-badge">Google Colab</span>
+          <span class="tech-badge">MySQL</span>
+          <span class="tech-badge">PostgreSQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FEATURED PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-tag">Featured Works</div>
+        <h2 class="section-title"><span>Demonstrating my</span> <em>Code & Logic</em></h2>
+        <p class="section-subtitle">Explore my open-source ML models, analytical dashboards, and learning repositories. Cards automatically pull repository details.</p>
+        
+        <div class="projects-grid">
+          <!-- Project 1: Car Price Prediction -->
+          <div class="glass-card project-card reveal-slide-left" data-repo="AbhayDw/AI-Powered-Car-Price-Prediction">
+            <div class="project-img-wrapper">
+              <img src="assets/car_price.png" alt="Car Price Prediction Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Streamlit</span>
+                <span class="project-metrics-pill">Random Forest</span>
+              </div>
+              
+              <h3>AI Powered Car Price Prediction</h3>
+              <p class="repo-desc">Interactive Streamlit web application that predicts car resale prices based on historical parameters using Random Forest Regression.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Automated data cleaning and preprocessing pipelines.</li>
+                <li>Hyperparameter tuning on Random Forest Regressor models.</li>
+                <li>Interactive Streamlit sliders and input forms for users.</li>
+                <li>Visual analytics showing metric distributions.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Streamlit</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/AI-Powered-Car-Price-Prediction" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://ai-powered-car-price-prediction-uikbeitr8vufn4ma9scyww.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: AI Emergency Patient Priority Prediction -->
+          <div class="glass-card project-card reveal-slide-right" data-repo="AbhayDw/Emergency-Patient-Priority-Prediction">
+            <div class="project-img-wrapper">
+              <img src="assets/patient_priority.png" alt="AI Emergency Patient Priority Prediction Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Healthcare · Classification</span>
+                <span class="project-metrics-pill">Logistic Regression</span>
+              </div>
+              
+              <h3>AI Emergency Patient Priority Prediction</h3>
+              <p class="repo-desc">An end-to-end Machine Learning application that predicts whether an emergency patient should receive immediate medical attention based on vital signs and clinical information. The application assists healthcare professionals by providing fast, intelligent priority predictions using Logistic Regression.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Automated data cleaning and missing value handling.</li>
+                <li>Exploratory data analysis and feature engineering.</li>
+                <li>Logistic Regression model training and evaluation.</li>
+                <li>Interactive Streamlit dashboard with real-time prediction.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Matplotlib</span>
+                <span class="project-tag">Seaborn</span>
+                <span class="project-tag">Scikit-Learn</span>
+                <span class="project-tag">Logistic Regression</span>
+                <span class="project-tag">Streamlit</span>
+                <span class="project-tag">Git</span>
+                <span class="project-tag">GitHub</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Emergency-Patient-Priority-Prediction" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://emergency-patient-priority-prediction-3zrx8fwguad42rcgzy7jaa.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Breast Cancer Detection -->
+          <div class="glass-card project-card reveal-slide-left" data-repo="AbhayDw/Breast-Cancer-Detection">
+            <div class="project-img-wrapper">
+              <img src="assets/breast_cancer.png" alt="Breast Cancer Detection Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Classification</span>
+                <span class="project-metrics-pill">Logistic Regression</span>
+              </div>
+              
+              <h3>Breast Cancer Detection</h3>
+              <p class="repo-desc">Machine Learning classification project that predicts breast cancer diagnosis using Logistic Regression and an interactive Gradio application.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Wisconsin breast cancer dataset exploratory analysis and evaluation.</li>
+                <li>Feature scaling and data preprocessing pipelines using Scikit-Learn.</li>
+                <li>Classification modeling using optimized Logistic Regression parameter tuning.</li>
+                <li>Interactive Gradio app for live user-friendly diagnosis prediction.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Scikit-Learn</span>
+                <span class="project-tag">Logistic Regression</span>
+                <span class="project-tag">Gradio</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Breast-Cancer-Detection" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://abhay200666-breast-cancer-detection.hf.space" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Titanic Survival Prediction -->
+          <div class="glass-card project-card reveal-slide-right" data-repo="AbhayDw/titanic-survival-prediction">
+            <div class="project-img-wrapper">
+              <img src="assets/titanic.png" alt="Titanic Survival Prediction Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Classification</span>
+                <span class="project-metrics-pill">Logistic Regression</span>
+              </div>
+              
+              <h3>Titanic Survival Prediction</h3>
+              <p class="repo-desc">Machine Learning classification project that predicts passenger survival using Logistic Regression and an interactive Gradio web application.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Complete data cleanup, imputation, and exploratory analysis.</li>
+                <li>Strategic feature engineering focusing on passenger titles and family groupings.</li>
+                <li>Binary classification engine trained on optimised Logistic Regression estimators.</li>
+                <li>Responsive Gradio interface enabling live simulation of passenger survival likelihoods.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Scikit-Learn</span>
+                <span class="project-tag">Logistic Regression</span>
+                <span class="project-tag">Gradio</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/titanic-survival-prediction" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://abhay200666-titanic-survival-prediction.hf.space" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: California Housing Price -->
+          <div class="glass-card project-card reveal-slide-left" data-repo="AbhayDw/California-Housing-Prediction">
+            <div class="project-img-wrapper">
+              <img src="assets/housing.png" alt="California Housing Price Prediction Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Machine Learning · Dashboard</span>
+                <span class="project-metrics-pill">Linear Regression</span>
+              </div>
+              
+              <h3>California Housing Price Prediction</h3>
+              <p class="repo-desc">An interactive Streamlit dashboard mapping house values based on spatial and demographic variables using Linear Regression.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Geographical distribution mapping of price variables.</li>
+                <li>Rigorous exploratory analysis (EDA) and correlation testing.</li>
+                <li>Evaluated with RMSE, MAE, and R-squared parameters.</li>
+                <li>Model loading via pickle variables.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Streamlit</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/California-Housing-Prediction" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://california-housing-prediction-gvzgrmvloicoaebc45rina.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Movie Recommendation -->
+          <div class="glass-card project-card reveal-slide-right" data-repo="AbhayDw/Movie_Recommendation_System">
+            <div class="project-img-wrapper">
+              <img src="assets/movie.png" alt="Movie Recommendation System Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Recommendation Systems · NLP</span>
+                <span class="project-metrics-pill">Cosine Similarity</span>
+              </div>
+              
+              <h3>Movie Recommendation System</h3>
+              <p class="repo-desc">Content-based recommendation engine utilizing natural language processing and vector similarity metrics to suggest movies.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Feature engineering extracting keywords, genres, and credits.</li>
+                <li>Text vectorization utilizing CountVectorizer models.</li>
+                <li>Calculates similarity matrices using Cosine Similarity.</li>
+                <li>Clean dropdown selection interface displaying poster urls.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">Cosine Similarity</span>
+                <span class="project-tag">Streamlit</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Movie_Recommendation_System" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">View GitHub</a>
+                <a href="https://movierecommendationsystem-kwdkndhzgdplqs3zhbwwri.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-accent">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Pandas Practice -->
+          <div class="glass-card project-card reveal-slide-left" data-repo="AbhayDw/Pandas_Practice">
+            <div class="project-img-wrapper">
+              <img src="assets/pandas.png" alt="Pandas Practice Repository Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Data Science · Learning</span>
+                <span class="project-metrics-pill">Jupyter Notebooks</span>
+              </div>
+              
+              <h3>Pandas Practice Repository</h3>
+              <p class="repo-desc">Comprehensive reference collection of Jupyter notebooks demonstrating simple to advanced Pandas operations.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Techniques for cleaning and restructuring raw data frames.</li>
+                <li>Querying, filtering, grouping, and aggregations.</li>
+                <li>Merging, joining, and consolidating multiple databases.</li>
+                <li>Time-series analysis and index manipulation.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Data Cleaning</span>
+                <span class="project-tag">Jupyter</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Pandas_Practice" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" style="flex: none; width: 100%;">View GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: NumPy Practice -->
+          <div class="glass-card project-card reveal-slide-right" data-repo="AbhayDw/Numpy_Practice">
+            <div class="project-img-wrapper">
+              <img src="assets/numpy.png" alt="NumPy Practice Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Math · Arrays · Foundation</span>
+                <span class="project-metrics-pill">Concepts</span>
+              </div>
+              
+              <h3>NumPy Practice Repository</h3>
+              <p class="repo-desc">A structured learning repository covering vector math, multi-dimensional matrices, and linear algebra foundations using NumPy.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Creation and manipulation of multi-dimensional arrays.</li>
+                <li>Mathematical matrix operations and matrix broadcasting.</li>
+                <li>Boolean indexing, sorting, slicing, and query selections.</li>
+                <li>Performance testing comparing NumPy with native Python lists.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Linear Algebra</span>
+                <span class="project-tag">Jupyter</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Numpy_Practice" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" style="flex: none; width: 100%;">View GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Data Visualization -->
+          <div class="glass-card project-card reveal-slide-left" data-repo="AbhayDw/Data_Visualization_with_Matplotlib-Seaborn">
+            <div class="project-img-wrapper">
+              <img src="assets/viz.png" alt="Data Visualization Preview">
+              <div class="project-img-overlay"></div>
+            </div>
+            
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-category">Analytics · Visualization · EDA</span>
+                <span class="project-metrics-pill">Matplotlib & Seaborn</span>
+              </div>
+              
+              <h3>Data Viz & Statistical Charts</h3>
+              <p class="repo-desc">Collection of visualization notebooks demonstrating complex statistical charts, dashboard setups, and EDA practices.</p>
+              
+              <span class="project-features-title">Core Features</span>
+              <ul class="project-features">
+                <li>Distribution plots, box-plots, jointplots, and heatmaps.</li>
+                <li>Customized themes, color palettes, and subplots.</li>
+                <li>Analytical charting illustrating variable correlations.</li>
+                <li>Complete statistical reporting on dataset variables.</li>
+              </ul>
+              
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Matplotlib</span>
+                <span class="project-tag">Seaborn</span>
+                <span class="project-tag">EDA</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/AbhayDw/Data_Visualization_with_Matplotlib-Seaborn" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" style="flex: none; width: 100%;">View GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CERTIFICATIONS SECTION -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-tag">Constant Upskilling</div>
+        <h2 class="section-title"><span>Professional</span> <em>Certifications</em></h2>
+        <p class="section-subtitle">Validating technical data engineering and analytical frameworks with official credentials.</p>
+        
+        <div class="certs-grid reveal-scale">
+          <!-- Cert 1: NPTEL -->
+          <div class="glass-card cert-card">
+            <div class="cert-icon">
+              <!-- Custom SVG NPTEL/Education vector -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+            </div>
+            <div class="cert-info">
+              <span class="cert-title">Python for Data Science</span>
+              <span class="cert-org">NPTEL Swayam (Score: 75%)</span>
+              <p class="cert-desc">Deep dive into data structures, scientific computing with NumPy/Pandas, visualization, and basic machine learning model building in Python.</p>
+            </div>
+          </div>
+
+          <!-- Cert 2: Cisco -->
+          <div class="glass-card cert-card">
+            <div class="cert-icon">
+              <!-- Custom SVG Cisco router/networking node vector -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="17" y1="5" x2="17" y2="19"></line><line x1="7" y1="5" x2="7" y2="19"></line><line x1="22" y1="9" x2="22" y2="15"></line><line x1="2" y1="9" x2="2" y2="15"></line></svg>
+            </div>
+            <div class="cert-info">
+              <span class="cert-title">Python Essentials 1</span>
+              <span class="cert-org">Cisco Networking Academy</span>
+              <p class="cert-desc">Foundational programming paradigms, object-oriented principles, modules, packages, and algorithmic problem-solving with Python.</p>
+            </div>
+          </div>
+
+          <!-- Cert 3: HackerRank -->
+          <div class="glass-card cert-card">
+            <div class="cert-icon">
+              <!-- Custom SVG HackerRank code star vector -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8.5 22 9 17 14 18.5 21 12 17 5.5 21 7 14 2 9 9 8.5 12 2"/></svg>
+            </div>
+            <div class="cert-info">
+              <span class="cert-title">SQL Intermediate Certification</span>
+              <span class="cert-org">HackerRank Academy</span>
+              <p class="cert-desc">Validated skill in writing complex SQL queries, database joins, subqueries, aggregation functions, and statistical reporting.</p>
+            </div>
+          </div>
+
+          <!-- Cert 4: Deloitte Forage -->
+          <div class="glass-card cert-card">
+            <div class="cert-icon">
+              <!-- Custom SVG Deloitte analytics grid vector -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+            </div>
+            <div class="cert-info">
+              <span class="cert-title">Data Analytics Virtual Experience</span>
+              <span class="cert-org">Deloitte (Forage platform)</span>
+              <p class="cert-desc">Practical tasks simulating data analytics consultant workflows, focusing on data preparation, dashboard storytelling, and presentation delivery.</p>
+            </div>
+          </div>
+
+          <!-- Cert 5: Master Class -->
+          <div class="glass-card cert-card" style="grid-column: span 2;">
+            <div class="cert-icon">
+              <!-- Custom SVG Master certificate globe/star vector -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line></svg>
+            </div>
+            <div class="cert-info" style="width: 100%;">
+              <span class="cert-title">Data Analyst Master Class</span>
+              <span class="cert-org">Integrated Power BI, SQL Queries, and Microsoft Excel Modeling</span>
+              <p class="cert-desc">Comprehensive training in Power BI dashboards, advanced SQL query design, database normalizations, and spreadsheet modeling.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs-action-container reveal-scale">
+          <a href="https://www.linkedin.com/in/abhay-dwivedi-6a8aa4279/details/certifications/" target="_blank" rel="noopener noreferrer" class="btn btn-primary certs-view-all-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            View All Certificates
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ACHIEVEMENTS & AWARDS -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-tag">Milestones</div>
+        <h2 class="section-title"><span>Awards &</span> <em>Achievements</em></h2>
+        <p class="section-subtitle">Highlights of my technical session invitations, coding rankings, and hackathons.</p>
+        
+        <div class="achievements-grid stagger-container">
+          <div class="glass-card ach-card">
+            <div class="ach-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="ach-title">AI/ML Speaker</h3>
+            <p class="ach-desc">Invited to lead a technical speaker session covering introductory ML concepts, attended by over 100 students.</p>
+          </div>
+
+          <div class="glass-card ach-card">
+            <div class="ach-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="ach-title">1st Prize — Shark Tank</h3>
+            <p class="ach-desc">Won first place at the Gravitation 2024 Shark Tank Event organized at Sagar Institute (SIRT), Bhopal.</p>
+          </div>
+
+          <div class="glass-card ach-card">
+            <div class="ach-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="ach-title">Best Event Coordinator</h3>
+            <p class="ach-desc">Managed, organized, and coordinated more than 25 technical and cultural college events.</p>
+          </div>
+
+          <div class="glass-card ach-card">
+            <div class="ach-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3 class="ach-title">Tech-Sageathon Hackathon</h3>
+            <p class="ach-desc">Participated in the National Tech-Sageathon Hackathon building collaborative web solutions.</p>
+          </div>
+
+          <div class="glass-card ach-card">
+            <div class="ach-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <h3 class="ach-title">3-Star CodeChef Coder</h3>
+            <p class="ach-desc">Active competitive programmer solving over 200 coding problems across LeetCode, CodeChef, and GFG.</p>
+          </div>
+
+          <div class="glass-card ach-card">
+            <div class="ach-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <h3 class="ach-title">Storytelling Event Winner</h3>
+            <p class="ach-desc">Winner of the inter-collegiate storytelling event demonstrating public speaking and communication skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. BOTTOM CALL TO ACTION BANNER -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Let's build something intelligent together.</h2>
+          <p>I am actively seeking AI, Machine Learning, Data Science, and Data Analytics internship opportunities. Let's discuss how my coding and analytical skills can assist your team.</p>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT SECTION -->
+    <section class="section" id="contact" style="padding-bottom: 140px;">
+      <div class="container">
+        <div class="section-tag">Communication Portal</div>
+        <h2 class="section-title"><span>Let's Connect &</span> <em>Collaborate</em></h2>
+        <p class="section-subtitle">Fill out the contact form below, or reach out through my direct coordinate links.</p>
+        
+        <div class="contact-grid">
+          <!-- Coordinates Panel Left -->
+          <div class="contact-info-panel reveal-slide-left">
+            <div class="glass-card contact-card">
+              <h3>Direct Coordinates</h3>
+              <p>Available for internships and technical collaborations. Typical response time is under 12 hours.</p>
+            </div>
+            
+            <div class="contact-links">
+              <a href="mailto:dwivediabhay727@gmail.com" class="contact-link-item">
+                <span class="contact-link-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <div class="contact-link-details">
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value">dwivediabhay727@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+919329903375" class="contact-link-item">
+                <span class="contact-link-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </span>
+                <div class="contact-link-details">
+                  <span class="contact-link-label">Phone</span>
+                  <span class="contact-link-value">+91 93299 03375</span>
+                </div>
+              </a>
+
+              <div class="contact-link-item">
+                <span class="contact-link-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </span>
+                <div class="contact-link-details">
+                  <span class="contact-link-label">Location</span>
+                  <span class="contact-link-value">Bhopal, MP, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card contact-card">
+              <h3>Digital Profiles</h3>
+              <div class="social-grids">
+                <a href="https://www.linkedin.com/in/abhay-dwivedi-6a8aa4279/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/AbhayDw" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Panel Right -->
+          <div class="glass-card contact-form-panel reveal-slide-right" style="display: flex; flex-direction: column; justify-content: center; gap: 20px; min-height: 380px; padding: 40px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 8px; text-align: center; color: var(--text-primary); font-family: var(--font-display);">Direct Contact</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 24px; text-align: center; color: var(--text-secondary); line-height: 1.5;">Choose your preferred channel to connect instantly. I usually respond within 24 hours.</p>
+            
+            <div class="direct-contact-buttons" style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
+              <a href="mailto:abhaydwivedi27@gmail.com?subject=Portfolio%20Inquiry%20%7C%20Machine%20Learning%20%26%20Data%20Science&body=Hello%20Abhay%2C%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20your%20Machine%20Learning%20and%20Data%20Science%20work.%0A%0AName%3A%0A%0ACompany%2FOrganization%3A%0A%0APurpose%3A%0A%0AMessage%3A%0A%0ABest%20Regards%2C" class="btn btn-email-direct" style="width: 100%; justify-content: center; padding: 14px; gap: 10px; font-size: 1rem; font-weight: 600;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Send me an Email</span>
+              </a>
+              
+              <a href="https://wa.me/919329903375?text=Hello%20Abhay%2C%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20your%20Machine%20Learning%20and%20Data%20Science%20work." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-direct" style="width: 100%; justify-content: center; padding: 14px; gap: 10px; font-size: 1rem; font-weight: 600;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.025 14.072.989 11.478.989c-5.437 0-9.862 4.371-9.866 9.8-.001 2.03.535 4.017 1.549 5.753L2.14 20.895l4.507-1.741zM17.7 13.86c-.34-.17-2.005-.99-2.316-1.103-.311-.113-.538-.17-.765.17-.226.34-.877 1.103-1.075 1.33-.198.226-.396.254-.736.084-.34-.17-1.437-.53-2.737-1.69-1.01-.902-1.69-2.016-1.888-2.356-.198-.34-.021-.523.149-.693.153-.153.34-.396.51-.595.17-.198.226-.34.34-.566.113-.226.056-.425-.028-.595-.085-.17-.765-1.842-1.049-2.528-.276-.665-.558-.574-.765-.584-.198-.01-.425-.01-.651-.01-.226 0-.595.085-.907.425-.311.34-1.188 1.161-1.188 2.833 0 1.672 1.216 3.284 1.386 3.51.17.227 2.392 3.653 5.795 5.122.81.35 1.443.559 1.936.716.813.259 1.554.222 2.139.135.653-.098 2.005-.82 2.288-1.615.283-.792.283-1.47.198-1.614-.085-.144-.311-.227-.651-.397z"></path></svg>
+                <span>Contact on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">Abhay<span>Dwivedi</span></a>
+        <span>·</span>
+        <span>© 2026. All Rights Reserved.</span>
+      </div>
+      <div class="footer-right">
+        <span>Designed & Engineered by Abhay Dwivedi | AI, ML, Data Science & Analytics</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT METHOD MODAL -->
+  <div id="contact-modal" class="modal-backdrop">
+    <div class="glass-card modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon">✉️</div>
+        <h3>Choose Send Method</h3>
+        <p>How would you like to transmit this message to Abhay?</p>
+      </div>
+      
+      <div class="modal-preview-box">
+        <p><strong>From:</strong> <span id="modal-preview-sender"></span></p>
+        <p><strong>Subject:</strong> <span id="modal-preview-subject"></span></p>
+        <p class="preview-msg" id="modal-preview-message"></p>
+      </div>
+      
+      <div class="modal-actions">
+        <button id="send-email-btn" class="modal-btn modal-btn-email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send via Email
+        </button>
+        <button id="send-whatsapp-btn" class="modal-btn modal-btn-whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.025 14.072.989 11.478.989c-5.437 0-9.862 4.371-9.866 9.8-.001 2.03.535 4.017 1.549 5.753L2.14 20.895l4.507-1.741zM17.7 13.86c-.34-.17-2.005-.99-2.316-1.103-.311-.113-.538-.17-.765.17-.226.34-.877 1.103-1.075 1.33-.198.226-.396.254-.736.084-.34-.17-1.437-.53-2.737-1.69-1.01-.902-1.69-2.016-1.888-2.356-.198-.34-.021-.523.149-.693.153-.153.34-.396.51-.595.17-.198.226-.34.34-.566.113-.226.056-.425-.028-.595-.085-.17-.765-1.842-1.049-2.528-.276-.665-.558-.574-.765-.584-.198-.01-.425-.01-.651-.01-.226 0-.595.085-.907.425-.311.34-1.188 1.161-1.188 2.833 0 1.672 1.216 3.284 1.386 3.51.17.227 2.392 3.653 5.795 5.122.81.35 1.443.559 1.936.716.813.259 1.554.222 2.139.135.653-.098 2.005-.82 2.288-1.615.283-.792.283-1.47.198-1.614-.085-.144-.311-.227-.651-.397z"/></svg>
+          Send via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts Link -->
+  <script src="js/app.js"></script>
+</body>
 </html>
